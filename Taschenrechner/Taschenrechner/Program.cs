@@ -10,29 +10,36 @@ namespace Taschenrechner
     {
         static void Main(string[] args)
         {
-            string antwort;
+            string antwort = "";
 
             do
             {
                 Console.Clear();
 
                 Console.WriteLine("Wilkommen zu dem besten Taschenrechner!");
-                Console.WriteLine("Geben sie ihre Zahlen jetzt ein :");
+                Console.WriteLine("Welchen Operrator wollen sie nutzen? + - * / ? :");
+                char op =  Convert.ToChar(Console.ReadLine());
 
+                switch (op)
+                {
+                    case '+':
 
-                int zahl1;
-                int zahl2;
+                        int zahl1;
+                        int zahl2;
 
-                Console.WriteLine("Erste Zahl: ");
-                zahl1 = Convert.ToInt32(Console.ReadLine());
-                zahl2 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Erste Zahl: ");
+                        zahl1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Zweite Zahl: ");
+                        zahl2 = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Das Ergebnis ist : {0}" , zahl1 + zahl2);
+                        Console.WriteLine("Das Ergebnis ist : {0}", zahl1 + zahl2);
 
-                Console.WriteLine("Nochmal rechnen? Ja/Nein");
+                        Console.WriteLine("Nochmal rechnen? Ja/Nein");
 
-                antwort = Console.ReadLine();
+                        antwort = Console.ReadLine();
 
+                        break;
+                } 
             } while (antwort == "Ja" || antwort == "J" || antwort == "j" || antwort == "ja");
 
 
